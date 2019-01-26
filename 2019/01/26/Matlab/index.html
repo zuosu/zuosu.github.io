@@ -24,6 +24,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-fill-left.min.css?v=1.0.2">
+
 
 
 
@@ -99,14 +106,14 @@
   <meta name="description" content="MATLAB被广泛用来作为计算工具在科学和工程涵盖领域物理，化学，数学和工程流。它在一定范围内的应用，包括：  信号处理和通信 图像和视频处理 控制系统 测试和测量 计算金融 计算生物学">
 <meta name="keywords" content="Matlab,数学建模">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matlab">
+<meta property="og:title" content="Matlab简介">
 <meta property="og:url" content="http://yoursite.com/2019/01/26/Matlab/index.html">
 <meta property="og:site_name" content="zuosu">
 <meta property="og:description" content="MATLAB被广泛用来作为计算工具在科学和工程涵盖领域物理，化学，数学和工程流。它在一定范围内的应用，包括：  信号处理和通信 图像和视频处理 控制系统 测试和测量 计算金融 计算生物学">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-26T04:03:02.830Z">
+<meta property="og:updated_time" content="2019-01-26T07:04:34.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Matlab">
+<meta name="twitter:title" content="Matlab简介">
 <meta name="twitter:description" content="MATLAB被广泛用来作为计算工具在科学和工程涵盖领域物理，化学，数学和工程流。它在一定范围内的应用，包括：  信号处理和通信 图像和视频处理 控制系统 测试和测量 计算金融 计算生物学">
 
 
@@ -124,7 +131,7 @@
   };
 </script>
 
-  <title>Matlab | zuosu</title>
+  <title>Matlab简介 | zuosu</title>
   
 
 
@@ -390,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Matlab
+          <h1 class="post-title" itemprop="name headline">Matlab简介
 
               
             
@@ -416,7 +423,7 @@
                 
               
 
-              <time title="创建时间：2019-01-26 11:52:43 / 修改时间：12:03:02" itemprop="dateCreated datePublished" datetime="2019-01-26T11:52:43+08:00">2019-01-26</time>
+              <time title="创建时间：2019-01-26 11:52:43 / 修改时间：15:04:34" itemprop="dateCreated datePublished" datetime="2019-01-26T11:52:43+08:00">2019-01-26</time>
             
 
             
@@ -448,6 +455,18 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/2019/01/26/Matlab/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/26/Matlab/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -506,9 +525,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Matlab/" rel="tag"><i class="fab fa-gripfire"></i> Matlab</a>
+            <a href="/tags/Matlab/" rel="tag"><i class="fab fa-cloudscale"></i>Matlab</a>
           
-            <a href="/tags/数学建模/" rel="tag"><i class="fab fa-gripfire"></i> 数学建模</a>
+            <a href="/tags/数学建模/" rel="tag"><i class="fab fa-cloudscale"></i>数学建模</a>
           
         </div>
       
@@ -550,6 +569,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -700,7 +723,7 @@
   
 </div>
 
-
+<!--
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
@@ -710,7 +733,7 @@
 
 
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.7.0</div>
-
+-->
 
 
 
@@ -825,6 +848,35 @@
 
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'whICSpkxBc5zlmwjuUve9Osj-gzGzoHsz',
+    appKey: '1fb3R5Nk1dOq7bUCpDshTAW',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   
@@ -837,7 +889,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
