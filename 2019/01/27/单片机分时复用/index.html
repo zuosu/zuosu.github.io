@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20170806143700792?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemlfeWFuZ18=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20170806143938678?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemlfeWFuZ18=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20170806144042961?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemlfeWFuZ18=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2019-01-27T07:02:35.493Z">
+<meta property="og:updated_time" content="2019-01-28T01:02:58.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单片机分时复用">
 <meta name="twitter:description" content="IO口种类那么io有哪几类呢？这里说的是51单片机总的io分为哪几类。单片机总的io会分为这几类：电平可变化的io口和VCC、GND两类。其中电平可变化的io有P0口、P1口、P2口、P3口、P4口、P5口。那么所谓P0.0又是什么呢？这里个人理解为：p0.0属于P0，P0称为P0口，P0.0称为P0.0端口，如果需要定义一个端口，可使用 sbit Sftclk = P0^0，这样就申明了一个端口">
@@ -436,12 +436,24 @@
                 
               
 
-              <time title="创建时间：2019-01-27 10:09:12 / 修改时间：15:02:35" itemprop="dateCreated datePublished" datetime="2019-01-27T10:09:12+08:00">2019-01-27</time>
+              <time title="创建时间：2019-01-27 10:09:12" itemprop="dateCreated datePublished" datetime="2019-01-27T10:09:12+08:00">2019-01-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-28 09:02:58" itemprop="dateModified" datetime="2019-01-28T09:02:58+08:00">2019-01-28</time>
               
             
           </span>
@@ -518,7 +530,9 @@
 <p>接着说单片机的口，P0口普通的io，没有第二功能的，而除了P0口外的其他口都有第二功能，多的第二功能甚至有四个功能。</p>
 <hr>
 <h1 id="1：P0端口的结构及工作原理"><a href="#1：P0端口的结构及工作原理" class="headerlink" title="1：P0端口的结构及工作原理"></a>1：P0端口的结构及工作原理</h1><p>P0端口8位中的一位结构图见下图：<br><img src="https://img-blog.csdn.net/20170806141954938?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemlfeWFuZ18=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="P0口8位中的一位结构图见下图"></p>
-<p>由上图可见，P0端口由锁存器、输入缓冲器、切换开关、一个与非门、一个与门及场效应管驱动电路构成。再看图的右边，标号为P0.X引脚的图标，也就是说P0.X引脚可以是P0.0到P0.7的任何一位，即在P0口有8个与上图相同的电路组成。<br>下面，我们先就组成P0口的每个单元部份跟大家介绍一下：<br>先看输入缓冲器：在P0口中，有两个三态的缓冲器，在学数字电路时，我们已知道，三态门有三个状态，即在其的输出端可以是高电平、低电平，同时还有一种就是高阻状态（或称为禁止状态），大家看上图，上面一个是读锁存器的缓冲器，也就是说，要读取D锁存器输出端Q的数据，那就得使读锁存器的这个缓冲器的三态控制端（上图中标号为‘读锁存器’端）有效。下面一个是读引脚的缓冲器，要读取P0.X引脚上的数据，也要使标号为‘读引脚’的这个三态缓冲器的控制端有效，引脚上的数据才会传输到我们单片机的内部数据<br>总线上。</p>
+<p>由上图可见，P0端口由锁存器、输入缓冲器、切换开关、一个与非门、一个与门及场效应管驱动电路构成。再看图的右边，标号为P0.X引脚的图标，也就是说P0.X引脚可以是P0.0到P0.7的任何一位，即在P0口有8个与上图相同的电路组成。<br>下面，我们先就组成P0口的每个单元部份跟大家介绍一下：<br>先看输入缓冲器：在P0口中，有两个三态的缓冲器，在学数字电路时，我们已知道，三态门有三个状态，即在其的输出端可以是高电平、低电平，同时还有一种就是高阻状态（或称为禁止状态），大家看上图，上面一个是读锁存器的缓冲器，也就是说，要读取D锁存器输出端Q的数据，那就得使读锁存器的这个缓冲器的三态控制端（上图中标号为‘读锁存器’端）有效。下面一个是读引脚的缓冲器，要读取P0.X引脚上的数据，也要使标号为‘读引脚’的这个三态缓冲器的控制端有效，引脚上的数据才会传输到我们单片机的内部数据总线上。</p>
+<p><em>P0口默认是开漏输出，开漏输出如果要输出高电平，IO电平要靠外部的上拉电阻才能拉成高电平，如果没有外部上拉电阻IO电平就是一个不确定态，所以要用P0口时外部需要加上上拉电阻</em></p>
+<p><strong>上拉电阻就是将不确定的信号通过一个电阻拉到高电平，同时此电阻也起到一个限流作用，下拉就是下拉到低电平，比如IO设置为开漏输出高电平或者高阻态时，默认的电平就是不确定的这时候就需要添加上拉或者下拉让它保持一个确定的状态</strong></p>
 <h3 id="D锁存器："><a href="#D锁存器：" class="headerlink" title="D锁存器："></a>D锁存器：</h3><p>构成一个锁存器，通常要用一个时序电路，时序的单元电路在学数字电路时我们已知道，一个触发器可以保存一位的二进制数（即具有保持功能），在51单片机的32根I/O口线中都是用一个D触发器来构成锁存器的。大家看上图中的D锁存器，D端是数据输入端，CP是控制端（也就是时序控制信号输入端），Q是输出端，Q非是反向输出端。对于D触发器来讲，当D输入端有一个输入信号，如果这时控制端CP没有信号（也就是时序脉冲没有到来），这时输入端D的数据是无法传输到输出端Q及反向输出端Q非的。如果时序控制端CP的时序脉冲一旦到了，这时D端输入的数据就会传输到Q及Q非端。数据传送过来后，当CP时序控制端的时序信号消失了，这时，输出端还会保持着上次输入端D的数据（即把上次的数据锁存起来了）。如果下一个时序控制脉冲信号来了，这时D端的数据才再次传送到Q端，从而改变Q端的状态。</p>
 <h3 id="多路开关："><a href="#多路开关：" class="headerlink" title="多路开关："></a>多路开关：</h3><p>在51单片机中，当内部的存储器够用（也就是不需要外扩展存储器时，这里讲的存储器包括数据存储器及程序存储器）时，P0口可以作为通用的输入输出端口（即I/O）使用，对于8031（内部没有ROM）的单片机或者编写的程序超过了单片机内部的存储器容量，需要外扩存储器时，P0口就作为‘地址/数据’总线使用。 那么这个多路选择开关就是用于选择是做为普通I/O口使用还是作为‘数据/地址’总线使用的选择开关了。大家看上图，当多路开关与下面接通时，P0口是作为普通的I/O口使用的，当多路开关是<br>与上面接通时，P0口是作为‘地址/数据’总线使用的。</p>
 <h3 id="输出驱动部份："><a href="#输出驱动部份：" class="headerlink" title="输出驱动部份："></a>输出驱动部份：</h3><p>从上图中我们已看出，P0口的输出是由两个MOS管组成的推拉式结构，也就是说，这两个MOS管一次只能导通一个，当V1导通时，V2就截止，当V2导通时，V1截止。</p>
